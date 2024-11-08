@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Produzione Musicale GG</title>
+        <!-- Aggiungi il link a Bootstrap 5 (CDN) -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Aggiungi il link a Font Awesome (CDN) per icone -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        
+        <!--icona-->
+        <link rel="icon" type="image/jpg" href="img/favicon.jpg">
+
+
+
+
+
+        <script>
+            // Assicurati che il DOM sia caricato prima di eseguire il codice
+            document.addEventListener("DOMContentLoaded", function() {
+                var mybutton = document.getElementById("scrollToTopBtn");
+        
+                // Quando l'utente scorre verso il basso 20px dalla parte superiore del documento, mostra il pulsante
+                window.onscroll = function() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        mybutton.style.display = "block"; // Mostra il pulsante
+                    } else {
+                        mybutton.style.display = "none"; // Nascondi il pulsante
+                    }
+                };
+        
+                // Quando l'utente clicca sul pulsante, torna in cima alla pagina
+                mybutton.onclick = function() {
+                    document.body.scrollTop = 0; // Per Safari
+                    document.documentElement.scrollTop = 0; // Per Chrome, Firefox, IE e Opera
+                };
+            });
+        </script>
+
+
+
+
+
+        <style>
+            /* Imposta uno sfondo nero e testo chiaro */
+            body {
+                background-color: #0f1819;
+                color: #fff;
+            }
+
+            .hero-section {
+                background: url('/img/sfondopag1 - Copia.png') no-repeat center center;
+                background-size: cover;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding-bottom: 0px;
+                padding-left: 0px;
+            }
+
+            .hero-section h1 {
+                font-size: 3rem;
+                font-weight: bold;
+                text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+            }
+
+            .btn-custom {
+                background-color: #e5b64a;
+                border-color: #e5b64a;
+            }
+
+            .btn-custom:hover {
+                background-color: #d09a3e;
+                border-color: #d09a3e;
+            }
+            /* Transizione per l'hover */
+            .nav-item {
+                transition: background-color 1s ease, border-color 1s ease, border-radius 1s ease, padding 1s ease;
+            }
+
+            /* Hover per il cambiamento di colore */
+            .nav-item:hover {
+                background-color: #d09a3e;
+                border-color: #000000;
+                border-radius: 100px;
+                padding: 10px;
+            }
+
+
+
+            .navbar-transparent {
+                background-color: transparent;
+                background-color: rgba(0, 0, 0, 0.7); 
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+        /* Rimuove i bordi da tutte le card */
+            .card {
+                border: none;
+                box-shadow: none;
+            }
+
+              /* Pulsante scroll to top */
+            #scrollToTopBtn {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 9999;
+                display: none; /* inizialmente nascosto */
+                background-color: #e5b64a;
+                border: none;
+                color: white;
+                width: 60px; /* Larghezza del pulsante */
+                height: 60px; /* Altezza del pulsante */
+                border-radius: 50%; /* Rende il pulsante rotondo */
+                font-size: 30px; /* Aumenta la dimensione della freccia */
+                cursor: pointer;
+                text-align: center;
+                line-height: 60px; /* Centra la freccia verticalmente */
+                transition: background-color 0.3s ease;
+            }
+
+            #scrollToTopBtn:hover {
+                background-color: #d09a3e;
+            }
+
+            /* Aggiungi icona freccia */
+            #scrollToTopBtn i {
+                font-size: 24px; /* Ridimensiona l'icona della freccia */
+            }
+
+            /* Separatore tra le sezioni */
+            section {
+                border-bottom: 2px solid #e5b64a; /* Colore della linea di separazione */
+                padding-bottom: 30px; /* Distanza tra il contenuto e la linea */
+                margin-bottom: 30px; /* Spazio tra la linea e la sezione successiva */
+            }
+
+        </style>
+
+
+
+
+
+    </head>
+
+
+
+
+
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent">
+            <div class="container">
+                <a class="navbar-brand" href="#">Musica con GG</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse offcanvas-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Servizi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#daw">DAW</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#mixing-mastering">Mix & Mastering</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#equipment">Attrezzatura</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contatti</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+            <!-- Sezione Hero -->
+            <section class="hero-section">
+                <div class="title">
+                    <h1>Esplora il Tuo Suono</h1>
+                    <p class="lead">Un viaggio emozionante nella produzione musicale, dove ogni nota prende vita.</p>
+                    <a href="#services" class="btn btn-custom btn-lg">Scopri di più</a>
+                </div>
+            </section>
+
+        <!-- Sezione Servizi -->
+        <section id="services" class="container py-5">
+            <h2 class="text-center mb-4">I Nostri Servizi</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-white bg-dark mb-4">
+                        <div class="d-flex justify-content-center">
+                            <a href="#daw"><img src="img/daw-software-850.jpg" class="card-img-top img-fluid" alt="DAW Software"></a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">
+
+                                <a class="text-white nav-link" href="#daw">DAW</a>
+                                <br>
+                                <br>
+                            </h5>
+                            <p class="card-text">La DAW è il software fondamentale per la produzione musicale, usato per registrare, mixare e arrangiare tracce audio.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-dark mb-4">
+                        <div class="d-flex justify-content-center">
+                            <a href="#mixing-mastering"><img src="img/Master.png" class="card-img-top img-fluid" alt="Mixing and Mastering"></a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">
+                                <a class="text-white nav-link" href="#mixing-mastering">Mixing e Mastering</a>
+                            </h5>
+                            <p class="card-text">Perfezionano le tracce, bilanciando il suono e ottimizzando la qualità.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-dark mb-4">
+                        <div class="d-flex justify-content-center">
+                            <a href="#equipment"><img src="img/ATTREZZATURA.JPG" class="card-img-top img-fluid" alt="Attrezzatura Necessaria"></a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">
+                                <a class="text-white nav-link" href="#equipment">Attrezzatura</a>
+                                <br>
+                                <br>
+            
+                            </h5>
+                            <p class="card-text">L'attrezzatura giusta è essenziale per una produzione musicale professionale, inclusi microfoni e monitor da studio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <hr>
+
+            <!-- Sezione DAW -->
+        <section id="daw" class="container py-5">
+            <h2 class="text-center mb-4">DAW (Digital Audio Workstation)</h2>
+            <p class="text-center mb-4">La DAW è il software principale utilizzato per produrre musica, registrare, editare e mixare tracce audio.</p>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card text-white bg-dark mb-4">
+                        <img src="img/daw-software-850.jpg" class="card-img-top" alt="DAW Software">
+                        <div class="card-body">
+                            <h5 class="card-title">Software DAW più Popolari</h5>
+                            <p class="card-text">Alcuni dei DAW più usati dai professionisti includono Ableton Live, FL Studio, Logic Pro X e Pro Tools.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <hr>
+
+        <!-- Sezione Mix e Mastering -->
+        <section id="mixing-mastering" class="container py-5">
+            <h2 class="text-center mb-4">Mix e Mastering</h2>
+            <p class="text-center mb-4">Mixare e masterizzare sono processi fondamentali per perfezionare e rifinire le tracce audio prima della distribuzione finale.</p>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card text-white bg-dark mb-4">
+                        <img src="img/Mixing.jpg" class="card-img-top" alt="Mixing">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Mixing</h5>
+                            <br>
+                            <br>
+                            <p class="card-text text-center">Il mixing consiste nel bilanciare e fondere tutte le tracce della canzone per creare un suono coerente e armonico.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card text-white bg-dark mb-4">
+                        <img src="img/Master.png" class="card-img-top" alt="Mastering">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Mastering</h5>
+                            <p class="card-text text-center">Il mastering è il processo finale di ottimizzazione del brano per ottenere la migliore qualità audio possibile.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                
+            <hr>
+
+        <!-- Sezione Attrezzatura Necessaria -->
+        <section id="equipment" class="container py-5">
+            <h2 class="text-center mb-4">Attrezzatura Necessaria</h2>
+            <p class="text-center mb-4">Per produrre musica in modo professionale è importante disporre dell'attrezzatura adeguata.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-white bg-dark mb-4">
+                        <img src="img/mic.jpg" class="card-img-top" alt="Microphone">
+                        <div class="card-body">
+                            <h5 class="card-title">Microfoni</h5>
+                            <br>
+                            <br>
+                            <p class="card-text">I microfoni di qualità sono essenziali per registrare voci e strumenti in modo chiaro e dettagliato. La scelta del microfono giusto dipende dal tipo di suono che desideri catturare e dall'ambiente di registrazione. In studio, la scelta del microfono giusto influisce direttamente sulla qualità del suono finale. Investire in microfoni di buona qualità è una delle decisioni più importanti per ottenere registrazioni professionali e cristalline.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-dark mb-4">
+                        <img src="img/scarlet.jpg" class="card-img-top" alt="Audio Interface">
+                        <div class="card-body">
+                            <h5 class="card-title">Interfaccia Audio</h5>
+                            <p class="card-text">L'interfaccia audio permette di collegare strumenti e microfoni al computer mantenendo un'alta qualità audio.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-dark mb-4">
+                        <img src="img/monitor.jpg" class="card-img-top" alt="Studio Monitors">
+                        <div class="card-body">
+                            <h5 class="card-title">Monitor da Studio</h5>
+                            <br>
+                            <br>
+                            <p class="card-text">I monitor da studio sono strumenti essenziali per ogni produttore musicale, ingegnere del suono o musicista, poiché garantiscono una riproduzione accurata e neutra del suono. Questo è fondamentale per fare un mix preciso e per assicurarsi che le tracce suonino bene su una varietà di sistemi audio diversi, dal cellulare agli impianti Hi-Fi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                    <hr>
+            <!-- Sezione Contatti -->
+            <section id="contact" class="bg-dark text-white py-5">
+                <div class="container text-center">
+                    <h2 class="mb-4">Contatta Gabriel Graziano</h2>
+                    <p>Per maggiori informazioni o per una consulenza gratuita, compila il form qui sotto (verrai ignorato).</p>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Nome" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Messaggio" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-custom">Invia</button>
+                    </form>
+                </div>
+            </section>
+
+
+
+
+
+            <!-- Footer -->
+            <footer class="bg-dark text-center text-white py-3">
+                <p>&copy; 2024 Produzione Musicale. Gabriel Graziano.</p>
+            </footer>
+
+            <!-- Aggiungi il link a Bootstrap 5 JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+            
+            <!-- Bottone Scroll to Top -->
+            <button id="scrollToTopBtn" title="Torna in cima">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        
+
+    </body>
+
+
+
+
+
+</html>
